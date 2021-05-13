@@ -4,7 +4,7 @@ USER root
 
 RUN sudo chown -R 1001:1001 "/home/seluser"
 
-RUN apt-get -y update
+RUN apt-get -y update && apt-get -y install google-chrome-stable
 
 RUN sudo apt-get -y install autoconf automake libusb-dev libusb-1.0-0-dev libplist-dev libplist++-dev usbmuxd libtool libimobiledevice-dev libssl-dev git-all
 
