@@ -3,6 +3,7 @@ FROM selenium/standalone-chrome:latest
 USER root
 
 RUN apt-get -y update
+RUN sudo chown -R 1001:1001 "/home/seluser/.npm"
 RUN sudo apt-get -y install autoconf automake libusb-dev libusb-1.0-0-dev libplist-dev libplist++-dev usbmuxd libtool libimobiledevice-dev libssl-dev git-all
 
 # RUN git clone https://github.com/google/ios-webkit-debug-proxy.git
